@@ -7,6 +7,7 @@ class User(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     username: str
     role: str
+    is_active: bool = Field(default=True)
 
 class Transaction(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
